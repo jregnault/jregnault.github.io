@@ -1,3 +1,5 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 h2.cv {
     border-bottom-style: solid;
     border-bottom-color: black;
@@ -22,3 +24,25 @@ div.cv-side {
     margin-right: auto;
     display: block;
 }
+
+footer {
+    background: rgb(10, 100, 200) !important;
+    color: rgb(255, 255, 255);
+}
+
+ul.social li{
+    padding: 3px 0;
+}
+
+ul.social li i {
+    margin-right: 5px;
+    font-size: 25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+ul.social li a{
+    color: rgb(255, 255, 255);
+}
+
