@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../css/main.css">
     
-    <title>Jérémie Regnault</title>
+    <title>Jérémie Regnault - Projets</title>
   </head>
   <body>
     <!-- Optional JavaScript -->
@@ -31,25 +31,37 @@
             <a class="nav-link" href="../index.html">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">CV</a>
+            <a class="nav-link" href="./cv.html">CV</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Travaux
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="./cours.html">Cours</a>
-              <a class="dropdown-item" href="./projets.html">Projets</a>
+              <a class="dropdown-item active" href="#">Projets <span class="sr-only">(current)</span></a>
             </div>
           </li>
         </ul>
       </div>
     </nav>
 
-    <section class="container-fluid">
+    <header>
+      <div class="jumbotron text-center">
+        <h1>Projets personnels</h1>
+        <p>Cette page présente une sélection de projets réalisés sur mon temps libre.</p>
+      </div>
+    </header>
+    
+    <section class="container">
       <div class="row">
-        <div class="col text-center">
-            <h1>Page en construction</h1>
+        <div class="card">
+          <img class="card-img-top" src="" alt="">
+          <div class="card-body">
+            <h3 class="card-title">Projet : PyQuickPlot</h3>
+            <p class="card-text">Implémentation d'un outil en ligne de commande pour la génération de graphiques. Ce projet était initialement un projet de cours que j'ai choisi de continuer.</p>
+            <a href="https://github.com/jregnault/PyQuickPlot" target="_blank" class="btn btn-primary">Voir le projet</a>
+          </div>
         </div>
       </div>
     </section>
