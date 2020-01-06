@@ -5,3 +5,11 @@ nav {
 .card {
     width: 18rem;
 }
+
+#portrait {
+    width: 30%;
+    height: auto;
+    margin-left: 1%;
+    margin-right: auto;
+    display: block;
+}
