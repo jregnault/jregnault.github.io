@@ -1,15 +1,138 @@
-nav {
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+h1 {
+    color: rgb(25,115,217);
+    font-size: 30pt;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.container{
+    margin: 0 10%;
+}
+
+.navbar {
     background-color: rgb(10, 100, 200);
+    justify-content: space-between;
+    padding: 0 5%;
 }
 
-.card {
-    width: 18rem;
+.navbar a {
+    text-decoration: none;
 }
 
-#portrait {
-    width: 25%;
-    height: auto;
-    margin-left: 1%;
-    margin-right: auto;
-    display: block;
+.navbar .nav {
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 30px;
+}
+
+.navbar li {
+    display: inline;
+    list-style: none;
+    margin-right: 25px;
+    position: relative;
+}
+
+.navbar li a:hover {
+    font-weight: bolder;
+}
+
+.navbar ul.nav a {
+    font-size: 15pt;
+    color: white;
+    font-weight: bold;
+    line-height: 1.936;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.navbar ul.nav a:hover {
+    color: fc0;
+}
+
+.navbar-fixed-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 99999;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+.logo img {
+    border-radius: 100%;
+}
+
+.logo a {
+    white-space: nowrap;
+}
+
+
+
+section {
+    background-color: rgba(255, 255, 255, 0.65);
+    margin: 0 10%;
+    padding: 1%;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    background-color: rgb(10, 100, 200);
+    padding: 0% 5%;
+    color: white;
+}
+
+footer p {
+    font-size: 14pt;
+    padding-bottom: 1%;
+}
+
+.icons ul {
+    margin: 0;
+    padding: 30px;
+}
+
+.icons li {
+    display: inline;
+    list-style: none;
+    margin-right: 24px;
+    position: relative;
+}
+
+.icons li a{
+    color: rgb(225, 225, 225);
+}
+
+.icons li a:hover{
+    color: white;
+}
+
+#intro {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#intro div {
+    margin: 10px;
 }

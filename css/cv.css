@@ -1,59 +1,68 @@
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
-h2.cv {
-    border-bottom-style: solid;
-    border-bottom-color: black;
-    border-bottom-width: 1px;
-    margin-top: 1cm;
+main {
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div.cv {
-    margin-bottom: 1cm;
+h1, h2, h3 {
+    font-weight: normal;
 }
 
-header {
-    margin-bottom: 1cm;
+.cv-header {
+    display: grid;
+    grid-template-columns: minmax(300px, 20%) 1fr;
+    background-color: rgb(10, 100, 200);
+    padding: 5px;
 }
 
-div.cv-side {
-    background-color: rgb(240, 240, 240);
+.cv-header h1 {
+    font-size: 35pt;
+    color: white;
 }
 
-#profil {
-    border-radius: 100%;
-    width: 60%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
+.cv-header h2 {
+    font-size: 20pt;
+}
+
+.cv-header img {
+    margin: 2% auto;
     display: block;
 }
 
-div.cv-item {
-    border-right-style: solid;
-    border-right-color: black;
-    border-right-width: 1px;
+.cv-desc ul {
+    padding-left: 15px;
 }
 
-footer {
-    background: rgb(10, 100, 200) !important;
-    color: rgb(255, 255, 255);
+.cv-main {
+    flex: 1 1 1fr;
+    padding: 2%
 }
 
-ul.social li{
-    padding: 3px 0;
+.cv-main h1 {
+    font-size: 21pt;
+    border-bottom: 1px solid black;
+    margin-top: 1cm;
 }
 
-ul.social li i {
-    margin-right: 5px;
-    font-size: 25px;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
+.cv-main h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
-ul.social li a{
-    color: rgb(255, 255, 255);
+.cv-main p {
+    margin: 5px 0;
 }
 
+.cv-entry {
+    display: grid;
+    grid-template-columns: minmax(115px, 20%) auto;
+}
+
+.cv-date {
+    padding: 5px;
+}
+
+.cv-desc {
+    border-left: 1px solid black;
+    padding-left: 5px;
+    padding-bottom: 1cm;
+}
