@@ -132,10 +132,11 @@ footer p {
 }
 
 #intro {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #intro div {
     margin: 10px;
+    flex: 1 1 150px;
 }
