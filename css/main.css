@@ -1,5 +1,28 @@
+:root {
+    color-scheme: light dark;
+    --text-secondary: #1973D9;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-primary: #000000;
+        --background-primary: #FFFFFF;
+        --background-secondary: #1973D9;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #f2f2f2;
+        --background-primary: #2a2a2e;
+        --background-secondary: #1973D9;
+    }
+}
+
 html {
     font-family: 'Poppins', sans-serif;
+    color: var(--text-primary);
+    background-color: var(--background-primary);
 }
 
 body {
@@ -10,7 +33,7 @@ body {
 }
 
 h1 {
-    color: rgb(25,115,217);
+    color: var(--text-secondary);
     font-size: 30pt;
 }
 
@@ -23,7 +46,7 @@ h1 {
 }
 
 .navbar {
-    background-color: rgb(10, 100, 200);
+    background-color: var(--background-secondary);
     justify-content: space-between;
     padding: 0 5%;
 }
@@ -93,7 +116,6 @@ h1 {
 }
 
 section {
-    background-color: rgba(255, 255, 255, 0.65);
     margin: 0 10%;
     padding: 1%;
 }
@@ -101,7 +123,7 @@ section {
 footer {
     display: grid;
     place-items: center;
-    background-color: rgb(10, 100, 200);
+    background-color: var(--background-secondary);
     padding: 0% 5%;
     color: white;
 }
