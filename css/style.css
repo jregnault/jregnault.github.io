@@ -19,15 +19,25 @@
     }
 }
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Poppins', sans-serif;
     color: var(--text-primary);
     background-color: var(--background-primary);
 }
 
-* {
-    margin: 0;
-    box-sizing: border-box;
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+h1 {
+    color: var(--text-secondary);
+    font-size: 30pt;
 }
 
 header {
@@ -71,4 +81,41 @@ nav li {
 }
 nav a:hover {
     font-weight: bolder;
+}
+
+section {
+    margin: 0 10%;
+    padding: 1%;
+}
+
+#intro {
+    display: flex;
+    flex-wrap: wrap;
+}
+#intro div {
+    margin: 10px;
+    flex: 1 1 150px;
+}
+
+.icons ul {
+    margin: 0;
+    padding: 30px;
+}
+.icons li {
+    display: inline;
+    margin-right: 25px;
+    position: relative;
+}
+.icons a {
+    color: var(--text-primary);
+}
+
+a.fb:hover{
+    color:#1877f2;
+}
+a.lin:hover{
+    color:#0077b5;
+}
+a.ghub:hover{
+    color:#181717;
 }

@@ -1,20 +1,3 @@
-body {
-    margin: 0;
-    display: grid;
-    height: 100vh;
-    grid-template-rows: auto 1fr auto;
-}
-
-h1 {
-    color: var(--text-secondary);
-    font-size: 30pt;
-}
-
-section {
-    margin: 0 10%;
-    padding: 1%;
-}
-
 footer {
     display: grid;
     place-items: center;
@@ -26,34 +9,4 @@ footer {
 footer p {
     font-size: 14pt;
     padding-bottom: 1%;
-}
-
-.icons ul {
-    margin: 0;
-    padding: 30px;
-}
-
-.icons li {
-    display: inline;
-    list-style: none;
-    margin-right: 24px;
-    position: relative;
-}
-
-.icons li a{
-    color: rgb(225, 225, 225);
-}
-
-.icons li a:hover{
-    color: white;
-}
-
-#intro {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#intro div {
-    margin: 10px;
-    flex: 1 1 150px;
 }
