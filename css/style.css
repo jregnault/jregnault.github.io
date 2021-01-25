@@ -94,12 +94,13 @@ section {
 }
 #intro div {
     margin: 10px;
-    flex: 1 1 150px;
+    flex: 1 0 150px;
 }
 
-.icons ul {
+.icons {
     margin: 0;
-    padding: 30px;
+    padding: 10px;
+    padding-left: 0;
 }
 .icons li {
     display: inline;
@@ -118,4 +119,45 @@ a.lin:hover{
 }
 a.ghub:hover{
     color:#181717;
+}
+
+.cards {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(200, 200, 200, 0.7),
+        rgba(200, 200, 200, 0.3)
+    );
+    backdrop-filter: blur(2rem);
+}
+
+.card-img img {
+    margin: 1rem 0;
+    height: 100px;
+    width: 100%;
+}
+
+.button {
+    color: white;
+    background-color: #1973D9;
+    padding: 10px;
+    width: max-content;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: #207AE0;
+}
+.button a:visited {
+    color: white;
+    text-decoration: none;
 }
