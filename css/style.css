@@ -35,6 +35,18 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0 5%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000000;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .logo {
@@ -45,4 +57,18 @@ header {
 }
 .logo img {
     border-radius: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 30px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+    position: relative;
+}
+nav a:hover {
+    font-weight: bolder;
 }
