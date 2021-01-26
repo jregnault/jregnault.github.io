@@ -1,11 +1,11 @@
 :root {
     color-scheme: light dark;
-    --text-secondary: #1973D9;
 }
 
 @media (prefers-color-scheme: light) {
     :root {
         --text-primary: #000000;
+        --text-secondary: #1973D9;
         --background-primary: #FFFFFF;
         --background-secondary: #1973D9;
     }
@@ -14,8 +14,9 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --text-primary: #f2f2f2;
+        --text-secondary: #0054b5;
         --background-primary: #2a2a2e;
-        --background-secondary: #1973D9;
+        --background-secondary: #0054b5;
     }
 }
 
@@ -167,13 +168,13 @@ a.ghub:hover{
 
 .button {
     color: white;
-    background-color: #1973D9;
+    background-color: var(--background-secondary);
     padding: 10px;
     width: max-content;
     text-decoration: none;
 }
 .button:hover {
-    background-color: #207AE0;
+    background-color: #257FE5;
 }
 .button a:visited {
     color: white;
