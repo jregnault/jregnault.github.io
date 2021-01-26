@@ -35,12 +35,20 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: var(--text-secondary);
 }
 
 h1 {
     font-size: 30pt;
+}
+
+h2 {
+    font-size: 22pt;
+}
+
+h3 {
+    font-size: 18pt;
 }
 
 header {
@@ -94,6 +102,9 @@ section {
 #intro {
     display: flex;
     flex-wrap: wrap;
+}
+#intro h2 {
+    color: var(--text-primary);
 }
 #intro div {
     margin: 10px;
@@ -167,6 +178,10 @@ a.ghub:hover{
 .button a:visited {
     color: white;
     text-decoration: none;
+}
+
+#cv h2 {
+    text-align: center;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -281,6 +296,18 @@ footer p {
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+
+    #intro h1 {
+        text-align: left;
+    }
+
+    #cv h2 {
+        text-align: left;
+    }
+
     /* Place the timelime to the left */
     .timeline::after {
         left: 31px;
