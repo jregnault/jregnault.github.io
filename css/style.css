@@ -261,6 +261,11 @@ a.ghub:hover{
     border-radius: 6px;
 }
 
+.loc {
+    font-style: italic;
+    font-size: 11pt;
+}
+
 footer {
     display: grid;
     place-items: center;
