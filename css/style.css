@@ -8,6 +8,10 @@
         --text-secondary: #1973D9;
         --background-primary: #FFFFFF;
         --background-secondary: #1973D9;
+        --gradient-primary: rgba(200, 200, 200, 0.7);
+        --gradient-secondary: rgba(200, 200, 200, 0.4);
+        --left-arrow: rgba(200, 200, 200, 0.5);
+        --right-arrow: rgba(200, 200, 200, 0.7);
     }
 }
 
@@ -17,6 +21,10 @@
         --text-secondary: #0054b5;
         --background-primary: #2a2a2e;
         --background-secondary: #004090;
+        --gradient-primary: rgba(20, 20, 20, 0.7);
+        --gradient-secondary: rgba(20, 20, 20, 0.4);
+        --left-arrow: rgba(20, 20, 20, 0.5);
+        --right-arrow: rgba(20, 20, 20, 0.7);
     }
 }
 
@@ -150,8 +158,8 @@ a.ghub:hover{
     background: white;
     background: linear-gradient(
         to right bottom,
-        rgba(20, 20, 20, 0.7),
-        rgba(20, 20, 20, 0.4)
+        var(--gradient-primary),
+        var(--gradient-secondary)
     );
     backdrop-filter: blur(2rem);
 }
@@ -243,7 +251,7 @@ a.ghub:hover{
     right: 30px;
     border: medium solid var(--text-primary);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent rgba(20, 20, 20, 0.5);
+    border-color: transparent transparent transparent var(--left-arrow);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -257,7 +265,7 @@ a.ghub:hover{
     left: 30px;
     border: medium solid var(--text-primary);
     border-width: 10px 10px 10px 0px;
-    border-color: transparent rgba(20, 20, 20, 0.7) transparent transparent;
+    border-color: transparent var(--right-arrow) transparent transparent;
 }
 
 .right::after {
@@ -269,8 +277,8 @@ a.ghub:hover{
     background: white;
     background: linear-gradient(
         to right bottom,
-        rgba(20, 20, 20, 0.7),
-        rgba(20, 20, 20, 0.4)
+        var(--gradient-primary),
+        var(--gradient-secondary)
     );
     backdrop-filter: blur(2rem);
     position: relative;
