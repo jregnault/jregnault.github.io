@@ -60,6 +60,10 @@ h3 {
     font-size: 18pt;
 }
 
+h2 a {
+    text-decoration: none;
+}
+
 header {
     background-color: var(--background-secondary);
     display: flex;
@@ -302,6 +306,8 @@ footer p {
     font-size: 14pt;
     padding-bottom: 1%;
 }
+
+
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
