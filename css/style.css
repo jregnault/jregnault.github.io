@@ -1,3 +1,5 @@
+/* Custom properties */
+
 :root {
     color-scheme: light dark;
 }
@@ -5,9 +7,9 @@
 @media (prefers-color-scheme: light) {
     :root {
         --text-primary: #000000;
-        --text-secondary: #1973D9;
-        --background-primary: #FFFFFF;
-        --background-secondary: #1973D9;
+        --text-secondary: #1973d9;
+        --background-primary: #ffffff;
+        --background-secondary: #1973d9;
         --gradient-primary: rgba(200, 200, 200, 0.7);
         --gradient-secondary: rgba(200, 200, 200, 0.4);
         --left-arrow: rgba(200, 200, 200, 0.5);
@@ -28,13 +30,93 @@
     }
 }
 
+/* custom buttom */
+.button {
+    --background-color: var(--background-primary);
+    --border-color: var(--text-primary);
+    --border-width: 0.125em;
+    --edge-size: 0.5em;
+
+    position: relative;
+    isolation: isolate;
+
+    text-decoration: none;
+    color: var(--text-primary);
+    display: inline-grid;
+    padding: 00.5em 1.5em;
+    border: 0;
+    background: var(--background-color);
+    clip-path: polygon(
+        /* top-left 1 */ 0% var(--edge-size),
+        /* top-left 2 */ var(--edge-size) 0%,
+        /* top-right */ 100% 0,
+        /* bottom-right 1 */ 100% calc(100% - var(--edge-size)),
+        /* bottom-right 2 */ calc(100% - var(--edge-size)) 100%,
+        /* bottom-left */ 0 100%
+    );
+    transition: color 250ms;
+}
+
+.button::before,
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.button::before {
+    background: var(--border-color);
+    z-index: -2;
+}
+
+.button::after {
+    background: var(--background-color);
+    z-index: -1;
+    clip-path: polygon(
+        /* top-left 1 */ var(--border-width)
+            calc(var(--edge-size) + var(--border-width) * 0.5),
+        /* top-left 2 */ calc(var(--edge-size) + var(--border-width) * 0.5)
+            var(--border-width),
+        /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+        /* bottom-right 1 */ calc(100% - var(--border-width))
+            calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
+        /* bottom-right 2 */
+            calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+            calc(100% - var(--border-width)),
+        /* bottom-left */ var(--border-width) calc(100% - var(--border-width))
+    );
+    transition: clip-path 500ms;
+}
+
+.button:where(:hover, :focus) {
+    color: var(--text-secondary);
+}
+.button:where(:hover, :focus)::after {
+    clip-path: polygon(
+        /* top-left 1 */ calc(100% - var(--border-width))
+            calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
+        /* top-left 2 */ calc(100% - var(--border-width)) var(--border-width),
+        /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+        /* bottom-right 1 */ calc(100% - var(--border-width))
+            calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5)),
+        /* bottom-right 2 */
+            calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+            calc(100% - var(--border-width)),
+        /* bottom-left */
+            calc(100% - calc(var(--edge-size) + var(--border-width) * 0.5))
+            calc(100% - var(--border-width))
+    );
+}
+
+/* global properties */
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
 html {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--text-primary);
     background-color: var(--background-primary);
 }
@@ -44,7 +126,9 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--text-secondary);
 }
 
@@ -63,6 +147,13 @@ h3 {
 h2 a {
     text-decoration: none;
 }
+
+section {
+    margin: 0 10%;
+    padding: 1%;
+}
+
+/* header */
 
 header {
     background-color: var(--background-secondary);
@@ -89,6 +180,7 @@ header a {
     color: white;
     font-size: 30px;
 }
+
 .logo img {
     border-radius: 100%;
 }
@@ -103,22 +195,21 @@ nav li {
     margin-right: 25px;
     position: relative;
 }
+
 nav a:hover {
     font-weight: bolder;
 }
 
-section {
-    margin: 0 10%;
-    padding: 1%;
-}
-
+/* Introduction section */
 #intro {
     display: flex;
     flex-wrap: wrap;
 }
+
 #intro h2 {
     color: var(--text-primary);
 }
+
 #intro div {
     margin: 10px;
     flex: 1 0 150px;
@@ -129,24 +220,28 @@ section {
     padding: 10px;
     padding-left: 0;
 }
+
 .icons li {
     display: inline;
     margin-right: 25px;
     position: relative;
 }
+
 .icons a {
     color: var(--text-primary);
 }
 
-a.fb:hover{
-    color:#1877f2;
+a.fb:hover {
+    color: #1877f2;
 }
-a.lin:hover{
-    color:#0077b5;
+a.lin:hover {
+    color: #0077b5;
 }
-a.ghub:hover{
-    color:#181717;
+a.ghub:hover {
+    color: #181717;
 }
+
+/* News section */
 
 .cards {
     display: grid;
@@ -178,20 +273,7 @@ a.ghub:hover{
     width: 100%;
 }
 
-.button {
-    color: white;
-    background-color: var(--background-secondary);
-    padding: 10px;
-    width: max-content;
-    text-decoration: none;
-}
-.button:hover {
-    background-color: #257FE5;
-}
-.button a:visited {
-    color: white;
-    text-decoration: none;
-}
+/* Resume section */
 
 #cv h2 {
     text-align: center;
@@ -204,7 +286,7 @@ a.ghub:hover{
     margin: 0 auto;
 }
 .timeline::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 6px;
     background-color: var(--background-secondary);
@@ -221,10 +303,9 @@ a.ghub:hover{
     background-color: inherit;
     width: 50%;
 }
-
 /* The circles on the timeline */
 .container::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 25px;
     height: 25px;
@@ -271,7 +352,6 @@ a.ghub:hover{
     border-width: 10px 10px 10px 0px;
     border-color: transparent var(--right-arrow) transparent transparent;
 }
-
 .right::after {
     left: -16px;
 }
@@ -294,6 +374,7 @@ a.ghub:hover{
     font-size: 11pt;
 }
 
+/* Footer */
 footer {
     display: grid;
     place-items: center;
@@ -306,8 +387,6 @@ footer p {
     font-size: 14pt;
     padding-bottom: 1%;
 }
-
-
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
@@ -327,14 +406,14 @@ footer p {
     .timeline::after {
         left: 31px;
     }
-    
+
     /* Full-width containers */
     .container {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
+
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 60px;
@@ -342,12 +421,13 @@ footer p {
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
     }
-    
+
     /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
+    .left::after,
+    .right::after {
         left: 15px;
     }
-    
+
     /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
